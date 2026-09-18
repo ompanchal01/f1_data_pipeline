@@ -1,15 +1,14 @@
-Welcome to your new dbt project!
+# Formula 1 Data Engineering Pipeline 🏎️💨
 
-### Using the starter project
+An end-to-end data pipeline built to ingest, clean, and model historical Formula 1 race performance datasets using data engineering best practices.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## 🛠️ Tech Stack & Tools
+* Python: Used for data ingestion, processing, and executing raw ETL transformations.
+* PostgreSQL: Serving as the centralized local data warehouse to house raw structured and modeled tables.
+* dbt (Data Build Tool): Utilized inside VS Code to build modular SQL data transformations, test data relationships, and compile models.
+* Git/GitHub: For version control and deployment architecture tracking.
 
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## 📐 Data Pipeline Architecture
+1. Extraction & Ingestion: Custom Python script (`script/extraction_load.py`) pulls the analytical F1 records and writes them sequentially into our PostgreSQL staging database schema.
+2. Staging Layer (`stg_`): Standardized schema models are generated using dbt to clean data types, ensure data integrity, and run generic schema tests (`unique`, `not_null`).
+3. Data Quality Framework: Automated data quality tests are actively maintained via our configurations to enforce primary key uniqueness and schema relationship mappings across the tables.
