@@ -1,0 +1,20 @@
+# 1. Logs & Cache Files (Catches both log locations and all .log files)
+logs/
+../logs/
+*.log
+target/
+dbt_packages/
+
+# 2. Database connection security & Local configurations
+profiles.yml
+.user.yml
+.env
+
+# 3. Python Virtual Environment & Cache files
+../.venv/
+__pycache__/
+*.pyc
+
+# 4. Large Raw Data files
+*.csv
+*.json

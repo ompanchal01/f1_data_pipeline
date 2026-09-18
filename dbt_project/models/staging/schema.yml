@@ -1,0 +1,82 @@
+version: 2
+
+models:
+  - name: stg_drivers
+    description: "Raw ingestion of F1 driver metadata."
+    columns:
+      - name: driver_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_teams
+    description: "Constructor and team tracking data."
+    columns:
+      - name: teams_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_season
+    description: "Championship season calendars."
+    columns:
+      - name: championship_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_qualy_race
+    description: "Qualifying session classifications."
+    columns:
+      - name: classification_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_race
+    description: "Main Grand Prix race results."
+    columns:
+      - name: driver_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_sprint_qualy
+    description: "Sprint qualifying shootout records."
+    columns:
+      - name: sprint_qualy_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_sprint_race
+    description: "Sprint race final positions."
+    columns:
+      - name: sprint_race_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_fp_1
+    description: "Free Practice 1 lap times."
+    columns:
+      - name: fp_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_fp_2
+    description: "Free Practice 2 lap times."
+    columns:
+      - name: fp_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_fp_3
+    description: "Free Practice 3 lap times."
+    columns:
+      - name: fp_id
+        tests:
+          - unique
+          - not_null

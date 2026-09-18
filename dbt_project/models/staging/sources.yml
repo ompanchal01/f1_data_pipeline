@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw_f1 
+    database: postgres
+    schema: raw_f1
+    tables:
+      - name: drivers
+      - name: free_practice_1
+      - name: free_practice_2
+      - name: free_practice_3
+      - name: qualy_race
+      - name: race
+      - name: season
+      - name: sprint_qualy
+      - name: sprint_race
+      - name: teams
